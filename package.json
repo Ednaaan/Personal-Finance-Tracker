@@ -1,0 +1,14 @@
+{
+  "name": "personal-finance-tracker",
+  "version": "1.0.0",
+  "description": "Personal Finance Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Md Adnan Sohail",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
