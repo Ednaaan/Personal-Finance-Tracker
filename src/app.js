@@ -1,11 +1,28 @@
 const express = require('express');
 const app = express();
 
-app.use((req, res) => {
-    res.send("hey ! I am here");
-});
+const connectDB  = require("./config/database");
+const router = require("./routes/authRouter");
 
 
-app.listen(2409, ()=> {
-    console.log("Connection Established on port 2409");
+
+app.use(express.json());
+
+
+ app.use("/", router);
+
+    
+
+
+
+
+connectDB(). then(()=> {
+    console.log("Database connection started");
+    app.listen(2408, ()=> {
+        console.log("Connection Established on port 2408");
+    });
+
+})
+.catch((err) => {
+    console.log("Database cannot be connected");
 });
