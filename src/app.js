@@ -6,7 +6,8 @@ const router = require("./routes/authRouter");
 const expenseRouter = require("./routes/expensesRouter");
 const cookieParser = require('cookie-parser');
 const incomeRouter = require('./routes/incomeRouter');
-// const budgetRouter = require("./routes/budgetRouter");
+const budgetRouter = require("./routes/budgetRouter");
+const summaryRouter = require("./routes/summaryRouter");
 
 
 
@@ -17,7 +18,8 @@ app.use(cookieParser());
  app.use("/", router);
  app.use("/", expenseRouter);
  app.use("/", incomeRouter);
-//  app.use('/', budgetRouter);
+ app.use('/', budgetRouter);
+ app.use("/", summaryRouter);
 
     
 
